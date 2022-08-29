@@ -1,1 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Atividade 3</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
 
+        body {
+            background-color: #ccc;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: auto;
+        }
+
+        .page {
+            text-align: justify;
+            line-height: 1rem;
+            background-color: #fff;
+            width: 800px;
+            height: 900px;
+            margin-bottom: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 3rem;
+        }
+
+        .page > h3 {
+            margin-top: 3rem;
+        }
+
+        p {
+            font-size: 12px;
+            color: #000;
+        }
+
+        .page-1 > h1 {
+            margin: 5rem;
+        }
+
+        .page-1 > h3 {
+            margin: 6rem;
+        }
+
+        .page > p:first-of-type {
+            margin-top: 2rem;
+        }
+
+        .page > p, ul {
+            margin: 0.5rem 4rem;
+            text-indent: 2rem;
+            line-height: 1.5rem;
+            font-size: 14px;
+        }
+
+        .page > ul {
+            margin-left: 8rem;
+        }
+
+        .page > ul > li {
+            margin-top: 2rem;
+        }
+
+        .page-5 > ul {
+            margin-left: 2rem;
+            width: 80%;
+        }
+
+        .page-5 > ul > li {
+            margin-top: 1rem;
+        }
+        
+        .references > p {
+            width: 80%;
+            text-indent: unset;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section class="page page-1">
+            
+            <h1>Fatec Sorocaba</h1>
+            <h3>Programação para Web</h3>
+            <h3>Frameworks</h3>
+            <h3>Luiz Miguel Jarduli Leite</h3>
+
+            <footer>
+                <p>Sorocaba/2022</p>
+            </footer>
+        </section>
+        <section class="page">
+            <h3>Introdução</h3>
+            <p>
+                O ser humano sempre buscou fazer mais por menos, e na área da tecnologia isso não é diferente,
+                o poder computacional vem crescendo ano a ano e com a lei de moore, que defende a tese de que a
+                cada dois anos o número de transistores em circuitos integrados é dobrado, isso comprova a rápida
+                evolução tecnológica que estamos vivendo. Já na área de desenvolvimento web, a demanda por aplicativos
+                móveis e de internet vem aumentando bastante, e com isso a utilização de bibliotecas e frameworks
+                que visam aumentar a produtividade e tempo hábil de desenvolvimento.
+            </p>
+        </section>
+        <section class="page">
+            <h3>Conceito de frameworks</h3>
+            <p>
+                Podemos dizer que frameworks são abstrações genéricas de códigos para resolver ou solucionar
+                problemas de algum domínio. Não é algo executável ou de certa forma pronto para produção, mas sim
+                um arcabouço de dados para esse domínio. Seus benefícios são vários, como maior facilidade para a
+                detecção de erros, por serem peças mais concisas de software, concentração na abstração de soluções
+                do problema que estamos tratando, eficiência na resolução dos problemas e otimização de recursos.
+            </p>
+            <p>
+                No desenvolvimento web temos vários frameworks, nesse documento vamos citar alguns e falar exclusivamente sobre Angular.
+            </p>
+        </section>
+        <section class="page">
+                <h3>Angular</h3>
+                <p>
+                    Começaremos discutindo um dos colossos no quesito framework para desenvolvimento Web, o Angular.
+                </p>
+                <p>
+                    É um framework JavaScript de código aberto mantido pela Google para a construção
+                    de SPA (sigla para Single Page Applications ou Aplicações de Página Única). Resumidamente,
+                    uma SPA é basicamente uma aplicação web construída em uma só página, na qual a interação e
+                    a navegação entre as sessões de uma página ocorrem de maneira a qual não é necessário recarregar
+                    a página em cada uma dessas mudanças.
+                </p>
+                <p>
+                    Sua finalidade é nos dar ferramentas necessárias para criação de aplicações SPA,
+                    além disso também deixa o desenvolvimento deste tipo de aplicação mais simples e otimizado. 
+                    Com ele, podemos desenvolver aplicações web voltadas tanto para resoluções desktop quanto para
+                    resoluções mobile, tornando-as dinâmicas, modernas e escaláveis.
+                </p>
+                <p>
+                    Com o Angular, temos um novo paradigma de desenvolvimento focado nos dados da aplicação.
+                    Ele não utiliza uma virtualização do DOM para manipulá-lo: ele utiliza mecanismos próprios 
+                    de detecção de alterações na interface, alterações disparadas principalmente por uma estrutura 
+                    chamada Two-Way Data Binding.
+                </p>
+                <p>
+                    Suas principais características são:
+                </p>
+                <ul>
+                    <li>
+                        Suporte cross-platform: esse framework fornece suporte a múltiplas plataformas de desenvolvimento. 
+                        O Angular pode ser utilizado para criar aplicações web SPA, aplicações mobile (com o suporte do Ionic, por exemplo) 
+                        ou até mesmo aplicações desktop (com o suporte do Electron). Mesmo em ambientes distintos, a API do Angular permanece
+                        praticamente a mesma, o que facilita a curvatura de adoção e aprendizagem em múltiplos ambientes de desenvolvimento;
+                    </li>
+                    <li>
+                        Integração e suporte à todas as fases de desenvolvimento: provê ferramentas e suporte para todas as fases de 
+                        desenvolvimento, desde a escrita do código em si (apoiando-se bastante na API e no sistema de tipos do TypeScript) 
+                        até a criação de fluxos de teste (com o apoio principalmente do Karma – uma biblioteca para escrita de testes JavaScript), 
+                        passando pelo suporte excelente à criação de animações, o provisionamento de estruturas de acessibilidade e até mesmo 
+                        o scaffolding de projetos através do Angular CLI;
+                    </li>
+                </ul>
+        </section>
+        <section class="page page-5">
+            <ul>
+                <li>
+                    Produtividade aliada à performance: consegue oferecer suporte ao desenvolvimento rápido de aplicações através
+                    de uma API simples, bem estruturada e bem documentada, o que acaba trazendo bastante produtividade.
+                </li>
+            </ul>
+            <p>
+                Por fim, por mais que o Angular não utilize o conceito de Virtual DOM 
+                (conceito utilizado por outros frameworks e bibliotecas JS, como o React), 
+                ainda sim o Angular oferece uma performance bem interessante, principalmente com a Ivy, 
+                a engine de renderização utilizada desde o Angular 6+.
+            </p>
+            <h3>Outros Frameworks do Mercado</h3>
+            <ul>    
+                <li>Bootstrap</li>
+                <li>SpringBoot</li>
+                <li>Cordova</li>
+                <li>Pure</li>
+                <li>Material Design</li>
+                <li>Flutter</li>
+                <li>Ionic</li>
+                <li>Laravel</li>
+                <li>VueJS</li>
+                <li>Svelte</li>
+            </ul>
+        </section>
+        <section class="page">
+            <h3>Conclusão</h3>
+            <p>
+                Por fim podemos dizer que essas ferramentas, que estão por trás dos processos em quase todos os sites,
+                aplicativos, extensões, programas e outros sistemas de computador, são essenciais para continuar evoluindo
+                e gerando alto rendimento e agregando valor para o usuário final. Afinal, é uma estrutura destinada a servir
+                de suporte ou guia para a construção de um projeto digital.
+            </p>
+            <p>
+                Seu principal objetivo é oferecer determinadas funcionalidades prontas aos desenvolvedores, que servem de base
+                para o desenvolvimento de novos projetos, gerando mais produtividade e lucratividade ao economizar tempo e reduzir os custos.
+            </p>
+        </section>
+        <section class="page references">
+            <h3>Bibliografia</h3>
+            <p>
+                <strong>INFOGRAPHIC: THE GROWTH OF COMPUTER PROCESSING POWER.</strong> Disponível em: <a href="https://www.offgridweb.com/preparation/infographic-the-growth-of-computer-processing-power">https://www.offgridweb.com/preparation/infographic-the-growth-of-computer-processing-power</a>. Acesso em 27 ago. 2022.
+            </p>
+            <p>
+                <strong>Framework.</strong> Disponível em: <a href="https://pt.wikipedia.org/wiki/Framework">https://pt.wikipedia.org/wiki/Framework</a>. Acesso em 27 ago. 2022.
+            </p>
+            <p>
+                <strong>O que é o Angular e para que serve?</strong> Disponível em: <a href="https://www.treinaweb.com.br/blog/o-que-e-o-angular-e-para-que-serve">https://www.treinaweb.com.br/blog/o-que-e-o-angular-e-para-que-serve</a>. Acesso em 27 ago. 2022.
+            </p>
+            <p>
+                <strong>Framework: saiba como usar e quais são os mais populares.</strong> Disponível em: <a href="https://blog.revelo.com.br/o-que-e-framework-exemplos-e-aplicacoes">https://blog.revelo.com.br/o-que-e-framework-exemplos-e-aplicacoes</a>. Acesso em 27 ago. 2022.
+            </p>
+        </section>
+    </div>
+</body>
+</html>
