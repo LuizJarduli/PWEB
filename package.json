@@ -1,22 +1,24 @@
 {
-  "name": "pweb",
-  "version": "1.0.0",
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/LuizJarduli/PWEB.git"
-  },
-  "author": " <luizjarduli@gmail.com>",
-  "license": "MIT",
-  "description": "",
-  "bugs": {
-    "url": "https://github.com/LuizJarduli/PWEB/issues"
-  },
-  "homepage": "https://github.com/LuizJarduli/PWEB#readme",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "dependencies": {
-    "lit": "^2.3.1"
-  }
+	"name": "pweb",
+	"version": "1.0.0",
+	"main": "index.js",
+	"type": "module",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/LuizJarduli/PWEB.git"
+	},
+	"author": " <luizjarduli@gmail.com>",
+	"license": "MIT",
+	"description": "",
+	"bugs": {
+		"url": "https://github.com/LuizJarduli/PWEB/issues"
+	},
+	"homepage": "https://github.com/LuizJarduli/PWEB#readme",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"dependencies": {
+		"axios": "^0.27.2",
+		"lit": "^2.3.1"
+	}
 }
