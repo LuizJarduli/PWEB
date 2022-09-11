@@ -15,5 +15,8 @@
   "homepage": "https://github.com/LuizJarduli/PWEB#readme",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "lit": "^2.3.1"
   }
 }
