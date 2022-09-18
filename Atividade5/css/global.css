@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&family=Roboto:ital,wght@0,300;0,400;0,700;1,700&family=Signika+Negative:wght@300&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    height: 100vh;
+    max-width: 100vw;
+    width: 100vw;
+    padding: 0 50px;
+    overflow-x: hidden;
+}
+
+header {
+    width: calc(100vw - 100px);
+}
+
+header > h1 {
+    margin: 50.5px 0px;
+}
+
+#nav-header {
+    background-color: #393939;
+}
+
+#nav-header > ul {
+    height: 60px;
+    display: flex;
+    list-style: none;
+    justify-content: start;
+    align-items: center;
+}
+
+.menu-item {
+    color: #FFF;
+    font-weight: 700;
+    padding: 0px 16px;
+    margin: 0px;
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-item:hover {
+    color: #393939;
+    background-color: rgb(224, 216, 216);
+    text-decoration: underline;
+}
+
+.active {
+    background-color: #F65050;
+    color: #FFF;
+    text-decoration: underline;
+}
+
+main {
+    width: calc(100vw - 100px);
+    height: calc(100vh - 40%);
+    margin: 25px 0px;
+    padding: 0px;
+}
+
+main > section {
+    width: calc(100vw - 100px);
+    display: flex;
+    height: inherit;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+main > section > #main-article {
+    width: 60%;
+    padding: 10px;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+main > section > #main-article span {
+    align-self: flex-start;
+    margin: 15px;
+}
+
+main > section > #main-article figure {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    flex: 1;
+    z-index: -1;
+}
+
+main > section > #main-article figure::after {
+    content: "";
+    background: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+main > section > #main-article figure > * {
+    z-index: 10;
+}
+
+main > section > #main-article figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+main > section > #secondline-articles {
+    width: 40%;
+    height: 82.7%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    color: white !important;
+}
+
+main > section > #secondline-articles > #last-article {
+    margin: 5px 0 0 5px;
+    width: 100%;
+    height: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+main > section > #secondline-articles > article > span {
+    margin: 15px;
+    align-self: flex-start;
+}
+
+main > section > #secondline-articles > article > figure {
+    position: absolute;
+    top: 0;
+    left: 0;
+    flex: 1;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+}
+
+main > section > #secondline-articles > article > figure::after {
+    content: "";
+    background: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+main > section > #secondline-articles > article > figure > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+main > section > #secondline-articles > #secondline-articles--row {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    width: 100%;
+}
+
+main > section > #secondline-articles > #secondline-articles--row  article {
+    margin: 0 5px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+main > section > #secondline-articles > #secondline-articles--row >  article > span {
+    margin: 15px;
+    align-self: flex-start;
+}
+
+main > section > #secondline-articles > #secondline-articles--row > article > figure {
+    position: absolute;
+    top: 0;
+    left: 0;
+    flex: 1;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+}
+
+main > section > #secondline-articles > #secondline-articles--row > article > figure::after {
+    content: "";
+    background: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+main > section > #secondline-articles > #secondline-articles--row > article > figure > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+#headlines span {
+    padding: 6px 10px;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.headline--text {
+    display: flex;
+    flex-direction: column;
+    height: 4rem;
+    padding: 15px;
+    justify-content: space-evenly;
+}
+
+.headline--text h1 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    font-size: 36px;
+}
+
+.small p {
+    font-family: 'Oswald', sans-serif;
+    font-size: 15px;
+}
+
+.small h1 {
+    font-size: 20px;
+}
+
+.yellow {
+    background-color: rgb(247, 151, 8);
+}
+
+.green {
+    background-color: green;
+}
+
+.red {
+    background-color: red;
+}
+
+.blue {
+    background-color: blue;
+}
