@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
-    <script defer src="js/main.js" type="module"></script>
     <title>Atividade </title>
 </head>
 <body>
@@ -23,9 +22,9 @@
         <section>
             <h1>Selecione pedra, papel ou tesoura</h1>
             <div id="btn-wrapper">
-                <button class="btn-option" onclick="start(jokempoEnumValues.ROCK)">👊</button>
-                <button class="btn-option" onclick="start(jokempoEnumValues.PAPER)">🖐</button>
-                <button class="btn-option" onclick="start(jokempoEnumValues.SCISOR)">✌</button>
+                <button class="btn-option" id="rock">👊</button>
+                <button class="btn-option" id="paper">🖐</button>
+                <button class="btn-option" id="scisor">✌</button>
             </div>
         </section>
     </main>
@@ -33,5 +32,6 @@
     <footer>
         <p id="footer">Luiz Miguel©</p>
     </footer>
+    <script defer src="js/main.js" type="module"></script>
 </body>
 </html>
