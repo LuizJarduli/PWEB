@@ -4,7 +4,7 @@ onInit();
 
 function getQuestionarie() {
     let stilQuestioning = false;
-    const allAnswers = []
+    const allAnswers = [];
     do {
         const age = Number(prompt('Qual sua idade ?'));
         const sex = String(prompt('Qual seu sexo? (F - feminino, M - masculino)'));
@@ -23,7 +23,7 @@ function willContinuePrompt() {
 }
 
 function getAverageFromValue(dataCollection = [], keyToAverage) {
-    return dataCollection.reduce((prev, curr) => (prev + curr[keyToAverage]) / dataCollection.length, 0);
+    return dataCollection.reduce((prev, curr) => (prev + curr[keyToAverage]) / dataCollection.length, 0)?.toFixed(2);
 }
 
 function getBiggerFromValue(dataCollection = [], keyToExtractBigger) {
@@ -31,12 +31,24 @@ function getBiggerFromValue(dataCollection = [], keyToExtractBigger) {
 }
 
 function getMinorFromValue(dataCollection = [], keyToExtractMinor) {
-    return dataCollection.reduce((prev, curr) => prev = curr[keyToExtractMinor] > prev ? prev : curr[keyToExtractMinor]);
+    return dataCollection.reduce((prev, curr) => prev = curr[keyToExtractMinor] < prev ? curr[keyToExtractMinor] : prev, dataCollection[0][keyToExtractMinor]);
 }
 
-// function getMinorFromValue(dataCollection = [], accumulateKey, accumulateValue) {
-//     return dataCollection.reduce((prev, curr) => prev + , 0);
-// }
+function getQtdFromValue(dataCollection = [], key, matchValue) {
+    return dataCollection.reduce((prev, curr) => prev = curr[key] === matchValue ? (prev += 1) : prev, 0);
+}
+
+function getPercentFromValue(dataCollection = [], key, includeInPercentValues = []) {
+    const allAcumulatedFoundData = dataCollection
+        .map((answers) => answers[key])
+        .reduce((prev, curr) => {
+            const includeInPercent = includeInPercentValues.includes(curr);
+            prev = includeInPercent ? (prev += 1) : prev;
+            return prev;
+        }, 0);
+
+    return `${ Number(allAcumulatedFoundData * 100 / dataCollection.length).toFixed(2) }%`;
+}
 
 function populateTableFromCollection(collection = []) {
 
@@ -47,15 +59,15 @@ function populateTableFromCollection(collection = []) {
     const qtdPessimo = document.getElementById(EnumElementsTableData.QTD_PESSIMO);
     const qtdMulheres = document.getElementById(EnumElementsTableData.QTD_MULHERES);
     const qtdHomens = document.getElementById(EnumElementsTableData.QTD_HOMENS);
-    const pctOtimoBom = document.getElementById(EnumElementsTableData.QTD_PESSIMO);
+    const pctOtimoBom = document.getElementById(EnumElementsTableData.PCT_OTIMO_BOM);
 
     mediaIdade.innerText = getAverageFromValue(collection, 'age');
     maiorIdade.innerText = getBiggerFromValue(collection, 'age');
     menorIdade.innerText = getMinorFromValue(collection, 'age');
     qtdPessimo.innerText = getQtdFromValue(collection, 'opinion', 1);
-    // qtdMulheres.innerText = getQtdFromValue(collection, 'sex', 'F');
-    // qtdHomens.innerText = getQtdFromValue(collection, 'sex', 'M');
-    // pctOtimoBom.innerText = getPercentFromValue(collection, 'opinion', [4,3]);
+    qtdMulheres.innerText = getQtdFromValue(collection, 'sex', 'F');
+    qtdHomens.innerText = getQtdFromValue(collection, 'sex', 'M');
+    pctOtimoBom.innerText = getPercentFromValue(collection, 'opinion', [4,3]);
 }
 
 function onInit() {
